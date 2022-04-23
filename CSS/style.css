@@ -211,7 +211,7 @@ body nav li:hover {
   transform: translate(-50%,-50%);
 }
 .triangle{
-  background-image: url(images/logo/triangle.png);
+  background-image: url(images/logo/triangle.svg);
   position: absolute;
   width: clamp(200px, 100%, 20vw);
   height: clamp(200px, 100%, 20vw);
