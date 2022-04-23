@@ -259,7 +259,7 @@ body nav li:hover {
 position:absolute;
 bottom:1%;
 right:50%;
-animation: arrowmove 1s ease-in-out infinite;
+animation: arrowmove 1.5s ease-in-out infinite;
 }
 .scroll-down span{
 position: absolute;
