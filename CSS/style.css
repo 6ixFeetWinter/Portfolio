@@ -170,6 +170,7 @@ body nav li:hover {
   height: 40px;
   transition: 0.3s;
   letter-spacing: 0.2em;
+  z-index: 2;
 }
 
 .global-title p:nth-of-type(2){
@@ -185,7 +186,27 @@ body nav li:hover {
 }
 
 .box-container{
+  position: relative;
   z-index: -1;
   width: 100%;
   height: 100vh;
+}
+.circle{
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  border: 2px solid #222222;
+  border-radius: 50%;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%,-50%);
+}
+.square{
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  border: 2px solid #222222;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
