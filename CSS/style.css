@@ -193,8 +193,8 @@ body nav li:hover {
 }
 .circle{
   position: absolute;
-  width: 20vw;
-  height: 20vw;
+  width: clamp(200px, 100%, 20vw);
+  height: clamp(200px, 100%, 20vw);
   border: 2px solid #222222;
   border-radius: 50%;
   top: 50%;
@@ -203,8 +203,18 @@ body nav li:hover {
 }
 .square{
   position: absolute;
-  width: 20vw;
-  height: 20vw;
+  width: clamp(200px, 100%, 20vw);
+  height: clamp(200px, 100%, 20vw);
+  border: 2px solid #222222;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.triangle{
+  background-image: url(images/logo/triangle.png);
+  position: absolute;
+  width: clamp(200px, 100%, 20vw);
+  height: clamp(200px, 100%, 20vw);
   border: 2px solid #222222;
   top: 50%;
   left: 50%;
