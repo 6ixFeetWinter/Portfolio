@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body>
     <div class="bg"></div>
@@ -24,6 +25,7 @@
         <div class="fixed">
             <nav>
                 <h2>MENU</h2>
+                <!-- メニュー中身 -->
                 <ul>
                     <li><p>About me</p></li>
                     <li><p>About me</p></li>
@@ -40,19 +42,34 @@
             </div>
     </header>
     <main class="content">
-        <div class="box-container">
+    <section class="top">
             <div class="circle"></div>
             <div class="triangle"></div>
         <div class="top-title">
             <h1>Portfolio</h1>
             <p>WEB DESGIN / CODING / AND MORE</p>
+            <p>ダークモードをご利用いただけます。</p>
         </div>
         <div class="scroll-down"><span>Scroll</span></div>
-        </div>
+    </section>
+    <section class="works">
+        <h2 class="works-title">Works</h2>
+    <!-- スライダーのコンテナ -->
+    <div class="swiper">
+      <!-- 必要に応じたwrapper -->
+      <div class="swiper-wrapper">
+        <!-- スライド -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+    </div>
+    </section>
     </main>
     <footer>
 
     </footer>
     <script src="main.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </body>
 </html>
