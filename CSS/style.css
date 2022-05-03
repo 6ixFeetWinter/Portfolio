@@ -9,6 +9,28 @@
   --dark-darker:#000;
   --dark-moon: #ffe882;
 }
+@keyframes circlemove{
+  0%{
+    top: -65px;
+  }
+  50%{
+    top: -70px;
+  }
+ 100%{
+   top: -65px;
+  }
+}
+@keyframes circlemovephone{
+  0%{
+    top: -30px;
+  }
+  50%{
+    top: -38px;
+  }
+ 100%{
+   top: -30px;
+  }
+}
 @keyframes arrowmove{
     0%{
       bottom:1%;
@@ -31,6 +53,17 @@
     left: 40%;
   }
 }
+@keyframes sunrisephone{
+  0%{
+    top: 60%;
+    left: 50%;
+  }
+
+  100%{
+    top:47%;
+    left: 35%;
+  }
+}
 div, body, ul, li, p, h1, h2{
   margin: 0;
   padding: 0;
@@ -40,6 +73,11 @@ body {
   margin-top: 0;
   padding: 0;
   background-color: var(--light-lightest);
+}
+img {
+  width: 100%;
+  height: auto;
+  vertical-align:bottom;
 }
 body li {
   list-style-type: none;
@@ -220,15 +258,15 @@ body nav li:hover {
   height: 100vh;
 }
 .circle{
-  animation: sunrise 1s ease;
+  animation: sunrisephone 1s ease;
   position: absolute;
-  width: clamp(70px, 100%, 15vw);
-  height: clamp(70px, 100%, 15vw);
+  width: clamp(80px, 100%, 15vw);
+  height: clamp(80px, 100%, 15vw);
   border: 2px solid var(--light-sun);
   background-color: var(--light-sun);
   border-radius: 50%;
   top: 47%;
-  left: 40%;
+  left: 30%;
   transform: translate(-50%,-50%);
 }
 .triangle{
@@ -250,22 +288,27 @@ body nav li:hover {
   text-align: center;
 }
 .top-title h1{
-  font-size: 4rem;
+  font-size: clamp(30px, 100%, 2rem);
 }
 .top-title p{
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 16px;
 }
 .top-title p:nth-of-type(2){
   margin-top: 10px;
   font-size: 0.6rem;
 }
-
 .scroll-down{
   position:absolute;
   bottom:1%;
   right:50%;
   animation: arrowmove 1.5s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.scroll-active{
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 .scroll-down span{
   position: absolute;
@@ -298,35 +341,189 @@ body nav li:hover {
 	background: var(--light-font-color);
 }
 .works{
+  position: relative;
   width: 100%;
-  height: 2000px;
+  padding: 100px 0 200px 0;
+  background-color: var(--light-lightest);
 }
-.swiper--wrapper {
-  /* wrapperのサイズを調整 */
+.swiper-button-next,.swiper-button-prev{
+  display: none;
+}
+.works-title{
+  position: relative;
+  width: 110px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+.works-title::after{
+  animation: circlemovephone 2s ease-in-out infinite;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--light-sun);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.swiper-container{
+  position: relative;
+}
+.swiper{
+  position: relative;
+  width: 90%;
+  aspect-ratio: 16 / 9;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 0 0 7px !important;
+  background: var(--light-sun) !important;
+}
+.swiper-pagination-bullet:first-child {
+  margin: 0 !important;
+}
+.allcontent{
+  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+.allcontent a::after{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border: 0px;
+  border-top: solid 4px var(--light-font-color);
+  border-right: solid 4px var(--light-font-color);
+}
+@media screen and (min-width: 360px) {
+  .circle{
+    position: absolute;
+    width: clamp(80px, 100%, 12vw);
+    height: clamp(80px, 100%, 12vw);
+    border: 2px solid var(--light-sun);
+    background-color: var(--light-sun);
+    border-radius: 50%;
+    top: 47%;
+    left: 35%;
+    transform: translate(-50%,-50%);
+  }
+}
+@media screen and (min-width: 520px) {
+  .circle{
+    animation: sunrise 1s ease;
+    position: absolute;
+    width: clamp(100px, 100%, 12vw);
+    height: clamp(100px, 100%, 12vw);
+    border: 2px solid var(--light-sun);
+    background-color: var(--light-sun);
+    border-radius: 50%;
+    top: 47%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+  }
+}
+@media screen and (min-width: 960px) {
+  .circle{
+    animation: sunrise 1s ease;
+  }
+  .triangle{
+    position: absolute;
+    background-color: var(--light-ligher);
+    width: clamp(250px, 100%, 30vw);
+    height: clamp(250px, 100%, 30vw);
+    clip-path: polygon(50% 10%, 0%  100%, 100% 100%, 100% 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+.works{
   width: 100%;
-  height: 300px;
+  margin-top: 200px;
+  padding: 100px 0;
+  background-color: var(--light-lightest);
+}
+.works-title{
+  position: relative;
+  width: 110px;
+  margin: 0 auto;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 80px;
+  z-index: 1;
+}
+.works-title::after{
+  animation: circlemove 2s ease-in-out infinite;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--light-sun);
+  position: absolute;
+  top: -65px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.swiper-container{
+  position: relative;
+}
+.swiper{
+  position: relative;
+  width: clamp(350px, 100%, 55vw);
+  aspect-ratio: 16 / 9;
+  border-radius: 3px;
+}
+.swiper-wrapper{
+  /* wrapperのサイズを調整 */
+  position: absolute;
+  top: 0;
 }
 
 .swiper-slide {
   /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
   color: #ffffff;
-  width: 100%;
-  height: 100%;
   text-align: center;
-  line-height: 300px;
 }
 
-.swiper-slide:nth-child(3n + 1) {
-  /*1、4、7、3n+1枚目の背景色 */
-  background-color: #de4439;
+.swiper-button-next{
+  margin-right: 15%;
+  color: var(--light-sun);
+}
+.swiper-button-prev{
+  margin-left: 15%;
+  color: var(--light-sun);
+}
+.swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  margin: 0 0 0 7px !important;
+  background: var(--light-sun) !important;
 }
 
-.swiper-slide:nth-child(3n + 2) {
-  /*2、5、8、3n+2枚目の背景色 */
-  background-color: #fcd500;
+.swiper-pagination-bullet:first-child {
+  margin: 0 !important;
 }
 
-.swiper-slide:nth-child(3n + 3) {
-  /*3、6、9、3n+3枚目の背景色 */
-  background-color: #53c638;
 }

@@ -7,11 +7,12 @@
     <link rel="mask-icon" sizes="any" href="images/logo/favicon.svg" color="#0bd">
     <title>Document</title>
     <link rel="stylesheet" href="CSS/bgAnimation.css">
-    <link rel="stylesheet" href="CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="CSS/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <div class="bg"></div>
@@ -50,42 +51,84 @@
             <p>WEB DESGIN / CODING / AND MORE</p>
             <p>ダークモードをご利用いただけます。</p>
         </div>
-        <div class="scroll-down"><span>Scroll</span></div>
+        <div class="scroll-down scroll-active"><span>Scroll</span></div>
     </section>
     <section class="works">
         <h2 class="works-title">Works</h2>
+        <div class="swiper-container">
         <div class="swiper">
             <!-- 必要に応じたwrapper -->
             <div class="swiper-wrapper">
             <!-- スライド -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">
+                <picture>
+                    <source src="images/Works/WarkinStore/walkin.avif">
+                    <img src="images/Works/WarkinStore/walkin.webp" alt="WarkinStoreTOP" loading="lazy">
+                </picture>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source src="images/Works/BThunder/Bt.avif">
+                    <img src="images/Works/BThunder/Bt.webp" alt="BlackThunderTOP" loading="lazy">
+                </picture>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source src="images/Works/PK/PKshampoo.avif">
+                    <img src="images/Works/PK/PKshampoo.webp" alt="PKshampooWebSiteRenewalTOP" loading="lazy">
+                </picture>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source src="images/Works/pasta/pasta.avif">
+                    <img src="images/Works/pasta/pasta.webp" alt="PulsPastaTOP" loading="lazy">
+                </picture>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source src="images/Works/kinokuni/Kino.avif">
+                    <img src="images/Works/kinokuni/Kino.webp" alt="KinokuniyaRenewalTop" loading="lazy">
+                </picture>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source src="images/Works/Coast/Coast.avif">
+                    <img src="images/Works/Coast/Coast.webp" alt="CoastTop" loading="lazy">
+                </picture>
+            </div>
             </div>
             <!-- 必要に応じてページネーション -->
             <div class="swiper-pagination"></div>
-            <!-- 必要に応じてナビボタン -->
+            </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-            </div>
+        </div>
+        <p class="allcontent"><a>作品一覧を見る</a></p>
     </section>
     </main>
     <footer>
 
     </footer>
-    <script src="main.js"></script>
+    <script src="asset/main.js"></script>
+    <script src="asset/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper(".swiper", {
-            pagination: {
-            el: ".swiper-pagination"
-            },
-             // ナビボタンが必要なら追加
-            navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        }
-        });
+    const swiper = new Swiper(".swiper", {
+        sliderPerView:1,
+        loop:true,
+        pagination: {
+        el: ".swiper-pagination",
+        clickable:true,
+    },
+        autoplay:{
+          delay:2500,
+          disableOnInteraction:false,
+    },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    }
+});
     </script>
 </body>
 </html>
