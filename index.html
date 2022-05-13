@@ -5,14 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="mask-icon" sizes="any" href="images/logo/favicon.svg" color="#0bd">
-    <title>Document</title>
+    <title>Portfolio｜フジイユウキ</title>
     <link rel="stylesheet" href="CSS/bgAnimation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="CSS/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="CSS/style.css">
+    <meta name="keywords" content="ポートフォリオ,Portfolio,フジイユウキ,Portfolioフジイユウキ">
+    <meta name="description" content="日本工学院専門学校に通っているフジイユウキです。在学中に作った作品を公開しています。">
+    <meta property="og:title" content="Portfolio｜フジイユウキ">
+    <meta property="og:description" content="日本工学院専門学校に通っているフジイユウキです。在学中に作った作品を公開しています。">
+    <meta property="og:local" content="ja_JP">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="them-color" content="#757575">
+    
 </head>
 <body>
     <div class="bg"></div>
@@ -28,9 +37,9 @@
                 <h2>MENU</h2>
                 <!-- メニュー中身 -->
                 <ul>
-                    <li><p>About me</p></li>
-                    <li><p>About me</p></li>
-                    <li><p>Contact</p></li>
+                    <li><a href="#works"><p>Works</p></a></li>
+                    <li><a href="#about"><p>About me</p></a></li>
+                    <li><a href="#contact"><p>Contact</p></a></li>
                 </ul>
             </nav>
             <div class="menuline">
@@ -43,7 +52,7 @@
             </div>
     </header>
     <main class="content">
-    <section class="top">
+    <section id="top" class="top">
             <div class="circle"></div>
             <div class="triangle"></div>
         <div class="top-title">
@@ -53,82 +62,209 @@
         </div>
         <div class="scroll-down scroll-active"><span>Scroll</span></div>
     </section>
-    <section class="works">
-        <h2 class="works-title">Works</h2>
-        <div class="swiper-container">
-        <div class="swiper">
-            <!-- 必要に応じたwrapper -->
-            <div class="swiper-wrapper">
-            <!-- スライド -->
-            <div class="swiper-slide">
-                <picture>
-                    <source src="images/Works/WarkinStore/walkin.avif">
-                    <img src="images/Works/WarkinStore/walkin.webp" alt="WarkinStoreTOP" loading="lazy">
-                </picture>
+    <section id="works" class="works">
+        <h2 class="section-title">Works</h2>
+        <div class="Workstab-wapper">
+            <input id="tab1" type="radio" name="tab_btn" checked>
+            <input id="tab2" type="radio" name="tab_btn">
+            <input id="tab3" type="radio" name="tab_btn">
+        
+            <div class="tab_area">
+                <label class="tab1_label label01" for="tab1">WEB SITE</label>
+                <label class="tab2_label label02" for="tab2">PHOTOGRAPH</label>
+                <label class="tab3_label label03" for="tab3">OTHER</label>
             </div>
-            <div class="swiper-slide">
-                <picture>
-                    <source src="images/Works/BThunder/Bt.avif">
-                    <img src="images/Works/BThunder/Bt.webp" alt="BlackThunderTOP" loading="lazy">
-                </picture>
+            <div class="panel_area">
+                <div id="panel1" class="tab_panel">
+                    <ul>
+                        <li>
+                            <picture>
+                                <source src="images/Works/WarkinStore/walkinThumb.avif">
+                                <img src="images/Works/WarkinStore/walkinThumb.webp" load="lazy" alt="WslkinStoreをリニューアルした画像のサムネイル">
+                            </picture>
+                            <p>WalkinStoreのリニューアル</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/BThunder/BtThumb.avif">
+                                <img src="images/Works/BThunder/BtThumb.webp" load="lazy" alt="ブラックサンダーのLPのサムネイル">
+                            </picture>
+                            <p>ブラックサンダーのLP</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/PK/PKThumb.avif">
+                                <img src="images/Works/PK/PKThumb.webp" load="lazy" alt="PKshampooリニューアルサイトのサムネイル">
+                            </picture>
+                            <p>PKshampooのリニューアル</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/pasta/pastaThumb.avif">
+                                <img src="images/Works/pasta/pastaThumb.webp" load="lazy" alt="パスタをテーマにしたWEBサイトのサムネイル">
+                            </picture>
+                            <p>パスタをテーマにしたWEBサイト</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/kinokuni/Kinothumb.avif">
+                                <img src="images/Works/kinokuni/Kinothumb.webp" load="lazy" alt="Kinokuniyaのリニューアルサイトのサムネイル">
+                            </picture>
+                            <p>紀伊國屋のリニューアル</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/Coast/Coast.avif">
+                                <img src="images/Works/Coast/CoastThumb.webp" load="lazy" alt="夏をテーマに制作したWEBサイトのサムネイル">
+                            </picture>
+                            <p>夏をテーマに制作したWEBサイト</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="panel2" class="tab_panel">
+                    <ul>
+                        <li>
+                            <picture>
+                                <source src="images/Works/photo/model/model.avif">
+                                <img src="images/Works/photo/model/model.webp" load="lazy" alt="モデル撮影の写真">
+                            </picture>
+                            <p>モデルの撮影・レタッチ</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/photo/donuts/donuts_page.avif">
+                                <img src="images/Works/photo/donuts/donuts_page.webp" load="lazy" alt="商品紹介ページの写真">
+                            </picture>
+                            <p>商品撮影・紹介ページの作成</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/photo/item/item.avif">
+                                <img src="images/Works/photo/item/item.webp" load="lazy" alt="商品撮影で撮影した写真">
+                            </picture>
+                            <p>商品撮影</p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="panel3" class="tab_panel">
+                    <ul>
+                        <li>
+                            <picture>
+                                <source src="images/Works/others/game01/game01.avif">
+                                <img src="images/Works/others/game01/game01.webp" load="lazy" alt="Scratchで制作したシューティングゲームの画像">
+                            </picture>
+                            <p>Scratchで制作したFPSゲーム</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/others/game02/game02.avif">
+                                <img src="images/Works/others/game02/game02.webp" load="lazy" alt="Scratchで制作したマルバツゲームの画像">
+                            </picture>
+                            <p>Scratchで制作したマルバツゲーム</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/others/game03/game03.avif">
+                                <img src="images/Works/others/game03/game03.webp" load="lazy" alt="Scratchで制作した横スクロールアクションゲームの画像">
+                            </picture>
+                            <p>Scratchで制作した<br>横スクロールアクションゲーム</p>
+                        </li>
+                        <li>
+                            <picture>
+                                <source src="images/Works/others/game04/game04.avif">
+                                <img src="images/Works/others/game04/game04.webp" load="lazy" alt="Unityで製作中の横スクロールアクションゲームの画像">
+                            </picture>
+                            <p>Unityで製作中の<br>横スクロールアクションゲーム</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="swiper-slide">
-                <picture>
-                    <source src="images/Works/PK/PKshampoo.avif">
-                    <img src="images/Works/PK/PKshampoo.webp" alt="PKshampooWebSiteRenewalTOP" loading="lazy">
-                </picture>
-            </div>
-            <div class="swiper-slide">
-                <picture>
-                    <source src="images/Works/pasta/pasta.avif">
-                    <img src="images/Works/pasta/pasta.webp" alt="PulsPastaTOP" loading="lazy">
-                </picture>
-            </div>
-            <div class="swiper-slide">
-                <picture>
-                    <source src="images/Works/kinokuni/Kino.avif">
-                    <img src="images/Works/kinokuni/Kino.webp" alt="KinokuniyaRenewalTop" loading="lazy">
-                </picture>
-            </div>
-            <div class="swiper-slide">
-                <picture>
-                    <source src="images/Works/Coast/Coast.avif">
-                    <img src="images/Works/Coast/Coast.webp" alt="CoastTop" loading="lazy">
-                </picture>
-            </div>
-            </div>
-            <!-- 必要に応じてページネーション -->
-            <div class="swiper-pagination"></div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
-        <p class="allcontent"><a>作品一覧を見る</a></p>
+    </section>
+    <section id="about" class="about">
+        <h2 class="section-title">About me</h2>
+        <div class="profile-container">
+            <P class="myPhoto">
+                <picture>
+                    <source src="images/icon/myPhoto/photo.avif">
+                    <img src="images/icon/myPhoto/photo .webp" load="lazy" alt="私の写真">
+                </picture>
+            </P>
+            <div class="profile">
+                <div class="name-container">
+                    <h3>Yuki Fujii</h3>
+                    <p>2000/11/20</p>
+                </div>
+                <p>Skills</p>
+                <ul class="skills">
+                    <li>
+                        <picture>
+                            <source src="images/icon/htmlicon/html.avif">
+                            <img src="images/icon/htmlicon/html.webp" load="lazy" alt="HTML LS のアイコン">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source src="images/icon/Psicon/psicon.avif">
+                            <img src="images/icon/Psicon/psicon.webp" load="lazy" alt="Photoshopのアイコン">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source src="images/icon/Aiicon/Aiicon.avif">
+                            <img src="images/icon/Aiicon/Aiicon.webp" load="lazy" alt="illustlatorのアイコン">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source src="images/icon/xdicon/xdicon.avif">
+                            <img src="images/icon/xdicon/xdicon.webp" load="lazy" alt="AdobeXDのアイコン">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source src="images/icon/Aeicon/Aeicon.avif">
+                            <img src="images/icon/Aeicon/Aeicon.webp" load="lazy" alt="AffterEffectのアイコン">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source src="images/icon/Pricon/Pricon.avif">
+                            <img src="images/icon/Pricon/Pricon.webp" load="lazy" alt="AdobePremireProのアイコン">
+                        </picture>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="prof-lineup">
+            <li>
+                <p><span>所属</span>日本工学院専門学校</p>
+            </li>
+            <li>
+                <p><span>MAIL</span>K020G1278@g.neec.ac.jp</p>
+            </li>
+            <li>
+                <p><span>居住</span>東京都大田区中央</p>
+            </li>
+        </ul>
+    </section>
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+        <p class="address">
+            <picture>
+                <source src="images/icon/Mail/Mailicon.avif">
+                <img src="images/icon/Mail/Mailicon.webp" load="lazy" alt="メールのアイコン">
+            </picture>
+            <a href="mailto:k020g1278@g.neec.ac.jp">K020G1278@g.neec.ac.jp</a>
+        </p>
+        <p class="inform">上記メールアドレスまでご連絡ください</p>
+        <p class="topButton"><a href="#top">TOP</a></p>
     </section>
     </main>
     <footer>
-
+        <p><small>COPYRIGHT © フジイユウキ</small></p>
     </footer>
     <script src="asset/main.js"></script>
-    <script src="asset/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script>
-    const swiper = new Swiper(".swiper", {
-        sliderPerView:1,
-        loop:true,
-        pagination: {
-        el: ".swiper-pagination",
-        clickable:true,
-    },
-        autoplay:{
-          delay:2500,
-          disableOnInteraction:false,
-    },
-        navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-    }
-});
     </script>
 </body>
 </html>

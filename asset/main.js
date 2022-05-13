@@ -15,6 +15,24 @@ window.addEventListener('scroll',()=>{
         arrow.classList.add('scroll-active');
     }    
 });
+const label01 = document.querySelector('.label01');
+const label02 = document.querySelector('.label02');
+const label03 = document.querySelector('.label03');
+label01.addEventListener('click',()=>{
+    label01.classList.add('tabActive');
+    label02.classList.remove('tabActive');
+    label03.classList.remove('tabActive');
+});
+label02.addEventListener('click',()=>{
+    label01.classList.remove('tabActive');
+    label02.classList.add('tabActive');
+    label03.classList.remove('tabActive');
+});
+label03.addEventListener('click',()=>{
+    label01.classList.remove('tabActive');
+    label02.classList.remove('tabActive');
+    label03.classList.add('tabActive');
+});
 document.querySelector('.toggle-button').addEventListener('click',()=>{
     document.querySelector('nav').classList.toggle('menutranslate');
     document.querySelector('.menuline').classList.toggle('maintranslate');
