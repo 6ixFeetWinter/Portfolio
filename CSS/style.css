@@ -31,16 +31,27 @@
    top: -30px;
   }
 }
-@keyframes arrowmove{
+@keyframes arrowmovephone{
     0%{
-      bottom:1%;
+      bottom: 15%;
     }
     50%{
-      bottom:3%;
+      bottom:12%;
     }
    100%{
-     bottom:1%;
+     bottom:15%;
     }
+}
+@keyframes arrowmove{
+  0%{
+    bottom: 1%;
+  }
+  50%{
+    bottom:3%;
+  }
+ 100%{
+   bottom:1%;
+  }
 }
 @keyframes sunrise{
   0%{
@@ -314,9 +325,9 @@ body nav li:hover {
 }
 .scroll-down{
   position:absolute;
-  bottom:1%;
+  bottom:15%;
   right:50%;
-  animation: arrowmove 1.5s ease-in-out infinite;
+  animation: arrowmovephone 1.5s ease-in-out infinite;
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -327,7 +338,7 @@ body nav li:hover {
 .scroll-down span{
   position: absolute;
   left:-20px;
-  bottom:10%;
+  bottom:10px;
   color: var(--light-font-color);
   font-size: 0.7rem;
   letter-spacing: 0.05em;
@@ -689,6 +700,9 @@ footer{
   width: 100px;
   height: 100px;
   top: -65px;
+}
+.scroll-down{
+  animation: arrowmove 1.5s ease-in-out infinite;
 }
 .Workstab-wapper{
   width: clamp(400px, 100%, 70%);

@@ -8,7 +8,7 @@ window.addEventListener('resize',()=>{
 });
 window.addEventListener('scroll',()=>{
     const scroll = window.scrollY
-    if(scroll > (arrowpos - (winH / 1.1))){
+    if(scroll > (arrowpos - (winH / 1.5))){
         arrow.classList.remove('scroll-active');
     }
     else{
