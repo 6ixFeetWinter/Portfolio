@@ -117,7 +117,7 @@ picture{
   position: fixed;
   width: 100%;
   margin-right: 10%;
-  z-index: 1;
+  z-index: 3;
 }
 body nav {
   position: absolute;
@@ -251,7 +251,6 @@ body nav li:hover {
   top: 62px;
   left: 30px;
   font-size: 1rem;
-  cursor: pointer;
   height: 40px;
   transition: 0.3s;
   letter-spacing: 0.2em;
