@@ -327,7 +327,7 @@ body nav li:hover {
 .scroll-down span{
   position: absolute;
   left:-20px;
-  bottom:10px;
+  bottom:10%;
   color: var(--light-font-color);
   font-size: 0.7rem;
   letter-spacing: 0.05em;
