@@ -613,6 +613,9 @@ input[type="radio"]{
   transform: translateX(-50%);
   bottom: 30px;
 }
+.topButton a{
+  color: var(--light-font-color);
+}
 footer{
   text-align: center;
   width: 100%;
