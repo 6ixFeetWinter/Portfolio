@@ -219,6 +219,9 @@ body nav li:hover {
   font-size: 0.8rem;
   letter-spacing: 0;
 }
+.global-title a{
+    color: var(--light-font-color);
+}
 .section-title{
     color: var(--dark-darker);
     position: relative;
@@ -364,6 +367,9 @@ footer{
   .global-title {
     color: var(--light-font-color-lighter);
   }
+  .global-title a{
+    color: var(--dark-font-color-lighter);
+}
   .circle{
     border:  2px solid var(--dark-moon);
     background-color: var(--dark-moon);

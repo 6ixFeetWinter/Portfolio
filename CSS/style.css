@@ -467,6 +467,9 @@ input[type="radio"]{
   margin-top: 13px;
   font-size: 14px;
 }
+.tab_panel li a{
+  color: var(--light-font-color);
+}
 #tab1:checked ~ .tab_area .tab1_label{
   background-color: var(--light-sun);
 }
@@ -827,6 +830,9 @@ footer{
   .tab_area label{
     background-color: var(--dark-font-color);
     color: var(--light-lightest);
+  }
+  .tab_panel li a{
+    color: var(--dark-font-color-lighter);
   }
   #tab1:checked ~ .tab_area .tab1_label{
     background-color: var(--dark-moon);
