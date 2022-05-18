@@ -369,7 +369,7 @@ body nav li:hover {
 .works{
   position: relative;
   width: 100%;
-  padding: 100px 0 20px 0;
+  padding: 200px 0 20px 0;
   background-color: var(--light-lightest);
 }
 .swiper-button-next,.swiper-button-prev{
@@ -568,7 +568,7 @@ input[type="radio"]{
 .contact{
   position: relative;
   text-align: center;
-  padding: 130px 0 300px;
+  padding: 200px 0 300px;
   background-color: var(--light-lightest);
 }
 .address{
