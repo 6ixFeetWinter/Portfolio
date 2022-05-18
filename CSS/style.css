@@ -2,10 +2,12 @@
   --light-color:#eeeeee;
   --light-ligher: #fdfdfd;
   --light-font-color:#707070;
+  --light-font-color-lighter:#E8E8E8;
   --light-lightest:#fff;
   --light-sun: #ffde9c;
   --dark-color:#575757;
   --dark-font-color:#909090;
+  --dark-font-color-lighter:#6C6C6C;
   --dark-darker:#000;
   --dark-moon: #ffe882;
 }
@@ -105,7 +107,7 @@ img {
   vertical-align:bottom;
 }
 a:link {
-  color: #333;
+  color: var(--light-font-color);
   text-decoration: none;
 }
 body li {
@@ -136,9 +138,9 @@ body nav {
   width: 0;
   overflow: hidden;
   height: 100vh;
-  background-color: #ffff;
+  background-color: var(--light-lightest);
   transition: width 0.3s;
-  box-shadow: 5px -3px 13px 0px rgb(227, 227, 227) inset;
+  box-shadow: 5px -3px 13px 0px var(--light-color) inset;
   text-align: center;
 }
 body nav h2 {
@@ -158,12 +160,12 @@ body nav li p {
   width: 50%;
   margin: auto;
   padding: 4px 5px;
-  color: #858585;
-  border-bottom: 1px solid #858585;
+  color: var(--light-font-color);
+  border-bottom: 1px solid var(--light-color);
 }
 body nav li:hover {
   opacity: 0.5;
-  background-color: #f1f1f1;
+  background-color: var(--light-color);
   transition: background-color 0.3s;
 }
 .menuWrapper {
@@ -183,7 +185,7 @@ body nav li:hover {
   display: block;
   width: 25px;
   height: 1px;
-  background-color: #222222;
+  background-color: var(--light-font-color);
   margin: auto;
   position: absolute;
   top: 0;
@@ -193,13 +195,13 @@ body nav li:hover {
 }
 .menuButton span {
   overflow: hidden;
-  color: #131313;
+  color: var(--light-font-color);
 }
 .menuButton::before, .menuButton::after {
   display: block;
   width: 30px;
   height: 1px;
-  background-color: #222222;
+  background-color: var(--light-font-color);
   margin: auto;
   position: absolute;
   top: 0;
@@ -458,7 +460,7 @@ input[type="radio"]{
 }
 .tab_panel li:hover{
   z-index: 2;
-  box-shadow: 0px 0px 20px #909090;
+  box-shadow: 0px 0px 20px var(--light-color);
   transition: box-shadow 0.5s ease;
 }
 .tab_panel li p{
@@ -535,8 +537,8 @@ input[type="radio"]{
   width: 33px;
 }
 .prof-lineup{
-  border-top: 1px solid #B2B2B2;
-  border-bottom: 1px solid #B2B2B2;
+  border-top: 1px solid var(--light-color);
+  border-bottom: 1px solid var(--light-color);
   width: clamp(270px, 100%, 40%);
   margin: 10px auto;
   font-size: 12px;
@@ -555,8 +557,8 @@ input[type="radio"]{
   margin: 0 15%;
 }
 .prof-lineup li:nth-child(2){
-  border-top: 1px solid #B2B2B2;
-  border-bottom: 1px solid #B2B2B2;
+  border-top: 1px solid var(--light-color);
+  border-bottom: 1px solid var(--light-color);
 }
 .contact .section-title::after{
   position: absolute;
@@ -651,8 +653,8 @@ footer{
     font-size: 1rem;
   }
   .prof-lineup{
-    border-top: 1px solid #B2B2B2;
-    border-bottom: 1px solid #B2B2B2;
+    border-top: 1px solid var(--light-color);
+    border-bottom: 1px solid var(--light-color);
     margin: 30px auto;
     font-size: 14px;
   }
@@ -719,7 +721,7 @@ footer{
   padding-bottom: 20px;
 }
 .tab_panel li:hover{
-  box-shadow: 0px 0px 30px #b4b4b4;
+  box-shadow: 0px 0px 30px var(--light-color);
 }
 .tab_panel li p{
   font-size: 16px;
@@ -758,4 +760,9 @@ footer{
   width: 50px;
   margin: 0 15%;
 }
+}
+@media (prefers-color-scheme:dark){
+  body{
+    background-color: var(--dark-darker);
+  }
 }
