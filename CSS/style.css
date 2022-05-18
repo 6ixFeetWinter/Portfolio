@@ -7,7 +7,7 @@
   --light-sun: #ffde9c;
   --dark-color:#575757;
   --dark-font-color:#909090;
-  --dark-font-color-lighter:#6C6C6C;
+  --dark-font-color-lighter:#f5f5f5;
   --dark-darker:#000;
   --dark-moon: #ffe882;
 }
@@ -100,6 +100,7 @@ body {
   margin-top: 0;
   padding: 0;
   background-color: var(--light-lightest);
+  color: var(--light-font-color);
 }
 img {
   width: 100%;
@@ -126,7 +127,7 @@ picture{
   cursor: pointer;
   letter-spacing: 0.25em;
 }
-.fixed {
+.fixed{
   position: fixed;
   width: 100%;
   margin-right: 10%;
@@ -143,17 +144,17 @@ body nav {
   box-shadow: 5px -3px 13px 0px var(--light-color) inset;
   text-align: center;
 }
-body nav h2 {
+body nav h2{
   margin: 50px 0 10px;
 }
-body nav li {
+body nav li{
   width: 100%;
   height: 60px;
   text-align: center;
   cursor: pointer;
   position: relative;
 }
-body nav li p {
+body nav li p{
   position: absolute;
   bottom: 0%;
   left: 23%;
@@ -195,7 +196,6 @@ body nav li:hover {
 }
 .menuButton span {
   overflow: hidden;
-  color: var(--light-font-color);
 }
 .menuButton::before, .menuButton::after {
   display: block;
@@ -268,11 +268,11 @@ body nav li:hover {
   transition: 0.3s;
   letter-spacing: 0.2em;
   z-index: 2;
+  color: var(--dark-darker);
 }
 
 .global-title p:nth-of-type(2){
   font-size: 0.8rem;
-  color: #858585;
   letter-spacing: 0;
 }
 .content{
@@ -341,7 +341,6 @@ body nav li:hover {
   position: absolute;
   left:-20px;
   bottom:10px;
-  color: var(--light-font-color);
   font-size: 0.7rem;
   letter-spacing: 0.05em;
   -ms-writing-mode: tb-rl;
@@ -377,6 +376,7 @@ body nav li:hover {
   display: none;
 }
 .section-title{
+  color: var(--dark-darker);
   position: relative;
   margin: 0 auto;
   font-size: 1.6rem;
@@ -469,21 +469,18 @@ input[type="radio"]{
 }
 #tab1:checked ~ .tab_area .tab1_label{
   background-color: var(--light-sun);
-  color: var(--light-font-color);
 }
 #tab1:checked ~ .panel_area #panel1{
   display:block;
 }
 #tab2:checked ~ .tab_area .tab2_label{
   background-color: var(--light-sun);
-  color: var(--light-font-color);
 }
 #tab2:checked ~ .panel_area #panel2{
   display:block;
 }
 #tab3:checked ~ .tab_area .tab3_label{
   background-color: var(--light-sun);
-  color: var(--light-font-color);
 }
 #tab3:checked ~ .panel_area #panel3{
   display:block;
@@ -492,7 +489,6 @@ input[type="radio"]{
   padding: 150px 0 100px;
 }
 .profile-container{
-  color: var(--light-font-color);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -537,8 +533,8 @@ input[type="radio"]{
   width: 33px;
 }
 .prof-lineup{
-  border-top: 1px solid var(--light-color);
-  border-bottom: 1px solid var(--light-color);
+  border-top: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
   width: clamp(270px, 100%, 40%);
   margin: 10px auto;
   font-size: 12px;
@@ -557,8 +553,8 @@ input[type="radio"]{
   margin: 0 15%;
 }
 .prof-lineup li:nth-child(2){
-  border-top: 1px solid var(--light-color);
-  border-bottom: 1px solid var(--light-color);
+  border-top: 1px solid #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
 }
 .contact .section-title::after{
   position: absolute;
@@ -566,7 +562,6 @@ input[type="radio"]{
   transform: translate(-50%);
   content: "連絡先";
   display: block;
-  color: var(--light-font-color);
   font-weight: lighter;
   font-size: 16px;
 }
@@ -653,8 +648,6 @@ footer{
     font-size: 1rem;
   }
   .prof-lineup{
-    border-top: 1px solid var(--light-color);
-    border-bottom: 1px solid var(--light-color);
     margin: 30px auto;
     font-size: 14px;
   }
@@ -671,7 +664,7 @@ footer{
   }
   .address a{
     font-size: 2rem;
-    border-bottom: 1px solid var(--light-font-color);
+
   }
 }
 @media screen and (min-width: 1180px) {
@@ -764,5 +757,63 @@ footer{
 @media (prefers-color-scheme:dark){
   body{
     background-color: var(--dark-darker);
+    color: var(--dark-font-color-lighter);
+  }
+  .top-title :nth-last-of-type(2){
+    text-shadow:1px 1px 1px var(--dark-font-color);
+  }
+  body nav li p{
+    color: var(--dark-font-color);
+  }
+  .menuButton span{
+    background-color: var(--dark-font-color-lighter);
+  }
+  .menuButton::before, .menuButton::after{
+    background-color: var(--dark-font-color-lighter);
+  }
+  .global-title {
+    color: var(--light-font-color-lighter);
+  }
+  .circle{
+    border:  2px solid var(--dark-moon);
+    background-color: var(--dark-moon);
+  }
+  .triangle{
+    background-color: var(--dark-color);
+  }
+  .section-title{
+    color: var(--dark-font-color-lighter);
+  }
+  .section-title::before{
+    background-color: var(--dark-moon);
+  }
+  .scroll-down:before, .scroll-down:after{
+    background-color: var(--dark-font-color-lighter);
+  }
+  body nav {
+    background-color: var(--dark-color);
+    box-shadow: 5px -3px 13px 0px #333333 inset;
+  }
+  body nav li p{
+    color: var(--dark-font-color-lighter);
+  }
+  .works, .contact, footer{
+    background-color: var(--dark-color);
+  }
+  .contact a{
+    color: var(--dark-font-color-lighter);
+  }
+  .contact picture{
+    filter: invert(100%);
+  }
+  .address a{
+    color: var(--dark-font-color-lighter);
+    border-bottom: 1px solid var(--dark-font-color-lighter);
+  }
+  .inform::before{
+    background-color: var(--dark-font-color-lighter);
+  }
+  .tab_panel li:hover{
+    box-shadow: 0px 0px 30px var(--dark-darker);
   }
 }
