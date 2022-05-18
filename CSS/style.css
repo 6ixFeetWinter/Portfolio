@@ -463,7 +463,7 @@ input[type="radio"]{
 }
 .tab_panel li p{
   margin-top: 13px;
-  font-size: 10px;
+  font-size: 14px;
 }
 #tab1:checked ~ .tab_area .tab1_label{
   background-color: var(--light-sun);
