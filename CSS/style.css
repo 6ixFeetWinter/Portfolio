@@ -101,6 +101,7 @@ body {
   padding: 0;
   background-color: var(--light-lightest);
   color: var(--light-font-color);
+  font-weight: lighter;
 }
 img {
   width: 100%;
@@ -376,7 +377,6 @@ body nav li:hover {
   display: none;
 }
 .section-title{
-  color: var(--dark-darker);
   position: relative;
   margin: 0 auto;
   font-size: 1.6rem;

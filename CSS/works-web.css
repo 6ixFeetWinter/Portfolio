@@ -36,7 +36,7 @@
 html{
   scroll-behavior: smooth;
 }
-div, body, ul, li, p, h1, h2{
+div, body, ul, li, p, h1, h2, h3{
   margin: 0;
   padding: 0;
   font-family: 'Abel', sans-serif;
@@ -46,6 +46,7 @@ body {
   padding: 0;
   background-color: var(--light-lightest);
   color: var(--light-font-color);
+  font-weight: lighter;
 }
 img {
   width: 100%;
@@ -91,6 +92,9 @@ body nav {
 }
 body nav h2{
   margin: 50px 0 10px;
+}
+body nav a{
+    color: var(--light-font-color);
 }
 body nav li{
   width: 100%;
@@ -223,13 +227,13 @@ body nav li:hover {
     color: var(--light-font-color);
 }
 .section-title{
-    color: var(--dark-darker);
     position: relative;
     margin: 0 auto;
     font-size: 1.6rem;
     text-align: center;
     margin-bottom: 40px;
     z-index: 1;
+    font-weight: 100;
   }
 .section-title::before{
     animation: circlemovephone 2s ease-in-out infinite;
@@ -312,8 +316,58 @@ footer{
   padding: 20px 0;
   background-color: var(--light-lightest);
 }
-@media screen and (min-width: 360px) {
-
+.top{
+    width: 100%;
+    padding-top: 100px;
+}
+.title-container{
+    width: 90%;
+    padding: 30px 2%  10px 2%; 
+    margin: 0 auto 20px auto;
+    border-bottom: solid 1px var(--light-font-color);
+}
+.title h1{
+    font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-weight: 200;
+    font-size: 4.7vw;
+    margin-bottom: 3px;
+}
+.title p{
+    font-size: 14px;
+    font-weight: 200;
+}
+.device-icon{
+    margin-top: 3px;
+    width: 20px;
+}
+.device-icon picture{
+    width: 100%;
+    height: auto;
+}
+.hero-image{
+    width: 90%;
+    margin: 0 auto;
+}
+.expression{
+    width: 90%;
+    padding: 30px 2%  10px 2%; 
+    margin: 0 auto 20px auto;
+    border-bottom: solid 1px var(--light-font-color);
+}
+.text-flex{
+    font-size: 14px;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+.expression p{
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 16px;
+}
+.desgin{
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
 }
 @media screen and (min-width: 520px) {
 
@@ -330,8 +384,44 @@ footer{
   }
   .address a{
     font-size: 2rem;
-
   }
+.hero-image{
+    width: 80%;
+    margin: 40px auto;
+}
+.device-icon{
+    margin-top: 3px;
+    width: 30px;
+}
+.top{
+    padding-top: 150px;
+}
+.title-container{
+    width: 80%;
+    padding: 30px 5%  10px 5%; 
+    margin: 0 auto 20px auto;
+}
+.title h1{
+    font-size: 3vw;
+}
+.desgin{
+    width: 80%;
+    margin: 40px auto;
+}
+.expression{
+    width: 80%;
+    padding: 30px 5%  20px 5%; 
+    margin: 0 auto 50px auto;
+}
+.title p{
+    font-size: 16px;
+    font-weight: 200;
+}
+.expression p{
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 18px;
+}
 }
 @media screen and (min-width: 1180px) {
 
@@ -346,10 +436,43 @@ footer{
   height: 100px;
   top: -65px;
 }
+.hero-image{
+    width: 60%;
+    margin: 60px auto;
+}
+.top{
+    padding-top: 200px;
+}
+.title-container{
+    width: 60%;
+    padding: 30px 5%  10px 5%; 
+    margin: 0 auto 20px auto;
+}
+.title h1{
+    font-size: 3vw;
+}
+.desgin{
+    width: 60%;
+    margin: 60px auto;
+}
+.expression{
+    width: 60%;
+    padding: 30px 5%  20px 5%; 
+    margin: 0 auto 50px auto;
+}
+.title p{
+    font-size: 18px;
+    font-weight: 200;
+}
+.expression p{
+    font-size: 18px;
+    margin-top: 10px;
+    line-height: 18px;
+}
 }
 @media (prefers-color-scheme:dark){
   body{
-    background-color: var(--dark-darker);
+    background-color: var(--dark-color);
     color: var(--dark-font-color-lighter);
   }
   .top-title :nth-last-of-type(2){
@@ -386,6 +509,9 @@ footer{
   .scroll-down:before, .scroll-down:after{
     background-color: var(--dark-font-color-lighter);
   }
+  .expression, .title-container{
+      border-bottom: 1px solid var(--light-color);
+  }
   body nav {
     background-color: var(--dark-color);
     box-shadow: 5px -3px 13px 0px #333333 inset;
@@ -401,6 +527,9 @@ footer{
   }
   .contact picture{
     filter: invert(100%);
+  }
+  .device-icon picture{
+      filter: invert(100%);
   }
   .address a{
     color: var(--dark-font-color-lighter);
@@ -433,4 +562,7 @@ footer{
   #tab3:checked ~ .tab_area .tab3_label{
     background-color: var(--dark-moon);
   }
+  body nav a{
+    color: var(--dark-font-color-lighter);
+}
 }
