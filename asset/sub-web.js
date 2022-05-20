@@ -4,7 +4,6 @@ document.querySelector('.toggle-button').addEventListener('click',()=>{
     document.querySelector('.content').classList.toggle('maintranslate');
     document.querySelector('.menuButton').classList.toggle('active');
     document.querySelector('.global-title').classList.toggle('maintranslate');
-    document.querySelector('.bg').classList.toggle('maintranslate');
 });
 document.querySelector('.menuButton').addEventListener('mouseover',()=>{
     document.querySelector('.menuButton').classList.add('hover');

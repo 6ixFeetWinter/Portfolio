@@ -338,7 +338,14 @@ footer{
 }
 .device-icon{
     margin-top: 3px;
+    display: flex;
+}
+.pc{
+    width: 25px;
+}
+.sp{
     width: 20px;
+    margin-left: 10px;
 }
 .device-icon picture{
     width: 100%;
@@ -369,6 +376,17 @@ footer{
     height: auto;
     margin: 30px auto;
 }
+.switch-button{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pc-button, .sp-button{
+  font-size: 14px;
+  padding: 5px 15px;
+  border: 1px solid var(--light-sun);
+  border-radius: 25px;
+}
 @media screen and (min-width: 520px) {
 
   .inform{
@@ -391,7 +409,13 @@ footer{
 }
 .device-icon{
     margin-top: 3px;
-    width: 30px;
+}
+.pc{
+  width: 35px;
+}
+.sp{
+  width: 30px;
+  margin-left: 10px;
 }
 .top{
     padding-top: 150px;
