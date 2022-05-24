@@ -380,12 +380,27 @@ footer{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: clamp(300px, 100%, 45%);
+  margin: 0 auto;
 }
 .pc-button, .sp-button{
   font-size: 14px;
   padding: 5px 15px;
   border: 1px solid var(--light-sun);
   border-radius: 25px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.switch-active{
+  background-color: var(--light-sun);
+  opacity: 1;
+}
+
+.pc-button:hover,.sp-button:hover{
+  opacity: 1;
+}
+.switch-active:hover{
+  opacity: 0.8;
 }
 @media screen and (min-width: 520px) {
 
@@ -446,6 +461,13 @@ footer{
     margin-top: 10px;
     line-height: 18px;
 }
+
+.pc-button, .sp-button{
+  font-size: 16px;
+}
+.sp-size{
+  width: 40%;
+}
 }
 @media screen and (min-width: 1180px) {
 
@@ -492,6 +514,12 @@ footer{
     font-size: 18px;
     margin-top: 10px;
     line-height: 18px;
+}
+.pc-button, .sp-button{
+  font-size: 20px;
+}
+.sp-size{
+  width: 20%;
 }
 }
 @media (prefers-color-scheme:dark){
@@ -588,5 +616,12 @@ footer{
   }
   body nav a{
     color: var(--dark-font-color-lighter);
+}
+.pc-button, .sp-button{
+  border: 1px solid var(--dark-moon);
+  color: var(--dark-font-color-lighter);
+}
+.switch-active{
+  background-color: var(--dark-moon);
 }
 }
