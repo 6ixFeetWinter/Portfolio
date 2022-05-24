@@ -10,7 +10,7 @@ pc.addEventListener('click',()=>{
 sp.addEventListener('click',()=>{
     sp.classList.add('switch-active');
     pc.classList.remove('switch-active');
-    desgin.innerHTML='<picture> <source src="../images/Works/BThunder/spFull-Bt.avif"> <img src="../images/Works/BThunder/pcFull-Bt.webp" alt="制作したデザイン"></picture>';
+    desgin.innerHTML='<picture> <source src="../images/Works/BThunder/spFull-Bt.avif"> <img src="../images/Works/BThunder/spFull-Bt.webp" alt="制作したデザイン"></picture>';
     desgin.classList.add('sp-size');
 });
 
