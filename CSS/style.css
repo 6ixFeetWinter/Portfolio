@@ -460,7 +460,7 @@ input[type="radio"]{
 }
 .tab_panel li:hover{
   z-index: 2;
-  box-shadow: 0px 0px 20px var(--light-color);
+  box-shadow: 0px 0px 30px var(--dark-font-color);
   transition: box-shadow 0.5s ease;
 }
 .tab_panel li p{
@@ -716,9 +716,9 @@ footer{
   width: calc(100%/3);
   padding-bottom: 20px;
 }
-.tab_panel li:hover{
+/*.tab_panel li:hover{
   box-shadow: 0px 0px 30px var(--light-color);
-}
+}*/
 .tab_panel li p{
   font-size: 16px;
 }
@@ -816,14 +816,14 @@ footer{
   .inform::before{
     background-color: var(--dark-font-color-lighter);
   }
-  .tab_panel li:hover{
+  /*.tab_panel li:hover{
     box-shadow: 0px 0px 30px var(--dark-darker);
   }
   .tab_panel li:hover{
     z-index: 2;
     box-shadow: 0px 0px 20px var(--dark-color);
     transition: box-shadow 0.5s ease;
-  }
+  }*/
   .tab_area label .tabActive{
     background-color: var(--dark-moon);
   }
