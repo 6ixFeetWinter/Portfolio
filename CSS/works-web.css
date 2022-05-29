@@ -354,6 +354,7 @@ footer{
 .hero-image{
     width: 90%;
     margin: 0 auto;
+    text-align: center;
 }
 .expression{
     width: 90%;
@@ -401,6 +402,12 @@ footer{
 }
 .switch-active:hover{
   opacity: 0.8;
+}
+.scratch-button a{
+  color: var(--light-font-color);
+}
+.scratch-button{
+  font-size: 18px;
 }
 @media screen and (min-width: 520px) {
 
@@ -623,5 +630,8 @@ footer{
 }
 .switch-active{
   background-color: var(--dark-moon);
+}
+.scratch-button a{
+  color: var(--dark-font-color-lighter);
 }
 }
