@@ -816,14 +816,6 @@ footer{
   .inform::before{
     background-color: var(--dark-font-color-lighter);
   }
-  /*.tab_panel li:hover{
-    box-shadow: 0px 0px 30px var(--dark-darker);
-  }
-  .tab_panel li:hover{
-    z-index: 2;
-    box-shadow: 0px 0px 20px var(--dark-color);
-    transition: box-shadow 0.5s ease;
-  }*/
   .tab_area label .tabActive{
     background-color: var(--dark-moon);
   }
