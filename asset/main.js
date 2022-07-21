@@ -3,7 +3,7 @@ const winH = window.innerHeight;
 const arrow = document.querySelector('.scroll-down');
 let arrowpos = arrow.getBoundingClientRect().top + window.pageYOffset;
 window.addEventListener('resize',()=>{
-    let arrowpos = arrow.getBoundingClientRect.top + window.pageYOffset; 
+    arrowpos = arrow.getBoundingClientRect().top + window.pageYOffset; 
     console.log(arrowpos);
 });
 window.addEventListener('scroll',()=>{
