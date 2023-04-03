@@ -384,6 +384,23 @@ footer{
   width: clamp(300px, 100%, 45%);
   margin: 0 auto;
 }
+.scnav{
+  width: 200px;
+  font-size: 18px;
+  padding: 10px 15px;
+  background-color: var(--light-sun);
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  opacity: 0.8;
+  margin: 20px auto;
+}
+.scbutton{
+  color: var(--dark-color);
+}
+.scnav a:active{
+  color: var(--dark-color);
+}
 .pc-button, .sp-button{
   font-size: 14px;
   padding: 5px 15px;
