@@ -731,6 +731,10 @@ footer{
 .myPhoto{
   margin-right: 30px;
   margin-left: 20px;
+  filter: blur(15px);
+}
+.myPhoto sourse img{
+  filter: blur(15px);
 }
 .profile{
   margin: 10px 25px;
